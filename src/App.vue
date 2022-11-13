@@ -1,31 +1,21 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-    <div class="text-primary">123</div>
-  </nav>
   <router-view/>
 </template>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+/* 中文字體 */
+@font-face{
+  font-family: custom-pixel;
+  src: url(./assets/font/zpix.woff2);
+  unicode-range: U+4E00-9FFF;
 }
-
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+/* 英文字體 */
+@font-face{
+  font-family: custom-pixel;
+  src: url(./assets/font/PressStart2P-Regular.ttf);
+  unicode-range: U+00-024F;
+}
+body {
+  font-family: custom-pixel;
 }
 </style>
