@@ -1,7 +1,7 @@
 <template>
   <div class="d-flex justify-content-between bg-danger">
     <div class="col-6"></div>
-    <div class="col-6">
+    <div class="col-6 d-flex justify-content-center">
       <nav class="navbar navbar-expand-lg d-flex align-items-center">
         <a class="navbar-brand" href="#"><img src="../assets/img/THEF2E.png" alt="THEF2E"></a>
         <button class="navbar-toggler" type="button"

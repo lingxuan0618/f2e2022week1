@@ -3,15 +3,19 @@
     <div class="bg-danger py-8">
       <h1 class="text-center text-white">常見問答</h1>
     </div>
-    <div class="d-flex">
-      <button class="btn btn-white text-danger text-center rounded-0">一般常見問答</button>
-      <button class="btn btn-white text-danger text-center rounded-0">UI設計師</button>
-      <button class="btn btn-white text-danger text-center rounded-0">前端工程師</button>
-      <button class="btn btn-white text-danger text-center rounded-0">團體組</button>
+    <div class="d-flex justify-content-center">
+      <button class="btn btn-white text-danger text-center rounded-0"
+      :class="{'bg-darkRed': active === 1}" @click="activeContent(1)">一般常見問答</button>
+      <button class="btn btn-white text-danger text-center rounded-0"
+      :class="{'bg-darkRed': active === 2}" @click="activeContent(2)">UI設計師</button>
+      <button class="btn btn-white text-danger text-center rounded-0"
+      :class="{'bg-darkRed': active === 3}" @click="activeContent(3)">前端工程師</button>
+      <button class="btn btn-white text-danger text-center rounded-0"
+      :class="{'bg-darkRed': active === 4}" @click="activeContent(4)">團體組</button>
     </div>
     <div class="mb-24 md:mb-36 qa-list px-3">
       <ul class="xl:text-lg tracking-wide">
-        <li v-for="(item, index) in normal" :key="index" class="mb-8">
+        <li v-for="(item, index) in contentList" :key="index" class="mb-8">
           <p class="text-lightOrange">Q:{{ item.question }}</p>
           <p class="text-white">A:{{ item.answer }}</p>
         </li>
@@ -25,6 +29,8 @@
 export default {
   data() {
     return {
+      active: 1,
+      contentList: [],
       normal: [
         { question: '如果某一週不小心挑戰失敗，是否能再繼續挑戰後面關卡？', answer: '可以，儘管那週挑戰失敗，之後您仍可以挑選喜歡的關卡進行挑戰，並在該關卡期限內繳交作品。' },
         { question: '大家都好強，我怕我做的東西沒有達到過關門檻，不敢登錄作品', answer: '這個活動並非競爭性質，每個參賽者都是你的隊友，最大的敵人是你自己，因為你必須定期練功前端開發，讓自己能夠順利完賽。' },
@@ -53,6 +59,30 @@ export default {
         { question: '團體組的 UI 設計稿，可以讓『個人組-前端工程師』組別採用嗎？', answer: '不能，預設是不能讓『個人組-前端工程師』採用。' },
       ],
     };
+  },
+  methods: {
+    activeContent(num) {
+      this.active = num;
+      switch (num) {
+        case 1:
+          this.contentList = this.normal;
+          break;
+        case 2:
+          this.contentList = this.ui;
+          break;
+        case 3:
+          this.contentList = this.frontEnd;
+          break;
+        case 4:
+          this.contentList = this.group;
+          break;
+        default:
+          break;
+      }
+    },
+  },
+  mounted() {
+    this.contentList = this.normal;
   },
 };
 </script>

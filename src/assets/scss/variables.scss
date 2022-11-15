@@ -41,6 +41,7 @@ $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #d63384 !default;
 $red:     #B82A06 !default;
+$darkRed: #3C0C00 !default;
 $orange:  #fd7e14 !default;
 $yellow:  #FFC612 !default;
 $lightOrange:#FFB3A4 !default;
@@ -68,6 +69,7 @@ $colors: (
   "gray":       $gray-600,
   "gray-dark":  $gray-800,
   "lightOrange": $lightOrange,
+  "darkRed": $darkRed,
 ) !default;
 // scss-docs-end colors-map
 
@@ -312,6 +314,7 @@ $light:         $gray-100 !default;
 $dark:          $gray-900 !default;
 $white:         $white !default;
 $lightOrange:   $lightOrange !default;
+$darkRed:       $darkRed !default;
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
@@ -325,7 +328,8 @@ $theme-colors: (
   "light":      $light,
   "dark":       $dark,
   "white":      $white,
-  "lightOrange":      $lightOrange
+  "lightOrange":      $lightOrange,
+  "darkRed": $darkRed,
 ) !default;
 // scss-docs-end theme-colors-map
 
