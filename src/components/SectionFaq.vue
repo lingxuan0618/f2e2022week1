@@ -1,27 +1,31 @@
 <template>
-  <div class="bg-dark">
+  <div class="bg-black">
     <div class="bg-danger py-8">
       <h1 class="text-center text-white">常見問答</h1>
     </div>
-    <div class="d-flex justify-content-center">
-      <button class="btn btn-white text-danger text-center rounded-0"
-      :class="{'bg-darkRed': active === 1}" @click="activeContent(1)">一般常見問答</button>
-      <button class="btn btn-white text-danger text-center rounded-0"
-      :class="{'bg-darkRed': active === 2}" @click="activeContent(2)">UI設計師</button>
-      <button class="btn btn-white text-danger text-center rounded-0"
-      :class="{'bg-darkRed': active === 3}" @click="activeContent(3)">前端工程師</button>
-      <button class="btn btn-white text-danger text-center rounded-0"
-      :class="{'bg-darkRed': active === 4}" @click="activeContent(4)">團體組</button>
+    <div class="container">
+      <div class="d-flex justify-content-between py-16">
+      <button class="btn btn-white text-danger text-center rounded-0 w-60"
+      :class="{'bg-darkRed': active === 1}" @click="activeContent(1)"><h3>一般常見問答</h3></button>
+      <button class="btn btn-white text-danger text-center rounded-0 w-60"
+      :class="{'bg-darkRed': active === 2}" @click="activeContent(2)"><h3>UI設計師</h3></button>
+      <button class="btn btn-white text-danger text-center rounded-0 w-60"
+      :class="{'bg-darkRed': active === 3}" @click="activeContent(3)"><h3>前端工程師</h3></button>
+      <button class="btn btn-white text-danger text-center rounded-0 w-60"
+      :class="{'bg-darkRed': active === 4}" @click="activeContent(4)"><h3>團體組</h3></button>
     </div>
-    <div class="mb-24 md:mb-36 qa-list px-3">
-      <ul class="xl:text-lg tracking-wide">
+    <div class="mb-24">
+      <ul class="p-0" style="min-height:35rem">
         <li v-for="(item, index) in contentList" :key="index" class="mb-8">
           <p class="text-lightOrange">Q:{{ item.question }}</p>
           <p class="text-white">A:{{ item.answer }}</p>
         </li>
       </ul>
     </div>
-    <button class="btn btn-white text-danger text-center rounded-0">立即註冊報名!</button>
+    <button class="w-p100 btn btn-white text-danger text-center rounded-0 mb-32 py-4">
+      <h1>立即註冊報名!</h1>
+    </button>
+    </div>
   </div>
 </template>
 <script>

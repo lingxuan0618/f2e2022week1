@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex flex-column justify-content-center bg-dark text-white">
+  <div class="d-flex flex-column justify-content-center bg-black text-white">
     <div class="d-flex flex-column align-items-center">
       <h2>區區修煉已經無法滿足了嗎？</h2>
       <h2>還有比賽等著你！</h2>

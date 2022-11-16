@@ -315,6 +315,7 @@ $dark:          $gray-900 !default;
 $white:         $white !default;
 $lightOrange:   $lightOrange !default;
 $darkRed:       $darkRed !default;
+$black:         $black !default;
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
@@ -328,8 +329,9 @@ $theme-colors: (
   "light":      $light,
   "dark":       $dark,
   "white":      $white,
-  "lightOrange":      $lightOrange,
-  "darkRed": $darkRed,
+  "lightOrange":$lightOrange,
+  "darkRed":    $darkRed,
+  "black":      $black,
 ) !default;
 // scss-docs-end theme-colors-map
 

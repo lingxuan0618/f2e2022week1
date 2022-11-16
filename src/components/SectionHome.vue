@@ -1,5 +1,5 @@
 <template>
-  <div class="py-6 px-4 bg-dark">
+  <div class="py-6 px-4 bg-black">
     <div class="mx-auto">
       <div class="d-flex justify-content-between text-white">
         <h2>I-    00</h2>
